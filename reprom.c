@@ -54,7 +54,7 @@ int main(int argc, char** argv){
 		check = 0;
 		fread(buf, size, 1, f);
 		for(int i=0; i<size; i++)if(buf[i]!=0xFF)check=1;
-		if(check == 0)printf("found free page #%d (address 0x%x) "TB_PATTERN"<--A%d\n", page, page*size, TB(page), atoi(argv[2])+1);
+		if(check == 0)printf("found free page #%d (address 0x%x) "TB_PATTERN"<--A%d\n", page, page*size, TB(page), atoi(argv[2]));
 		page++;
 	}
 	fclose(f);
